@@ -1,0 +1,150 @@
+/* Countdown Timer Component Styles */
+:root {
+    --main-accent: purple;
+    --main-bkg: white;
+    --main-second-bkg: rgb(212, 212, 212);
+    --main-font: 'Arial', sans-serif;
+    --text-dark: #0d0d0d;
+    --text-light: white;
+}
+
+/* Simple reset of default styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: var(--text-dark);
+    font-size: 18px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Setup of global styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.page {
+    background-color: var(--main-bkg);
+}
+
+.site-header .site-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.site-header .site-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.site-header .site-nav .nav-link {
+    color: blue;
+    text-decoration: underline;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.site-footer .footer-link {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 2rem 1rem;
+}
+
+.component.section {
+    background-color: var(--main-second-bkg); /* Adds coloured background for components */
+    margin-bottom: 1rem; /* Separator space between components */
+}
+
+/* Index.html Styles */
+.index.page .category {
+    margin-top: 1rem;
+}
+
+.index.page .component-list .nav-link {
+    color: blue;
+    text-decoration: underline;
+}
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+}
+
+.countdown-timer .timer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--main-bkg);
+    max-width: fit-content;
+    padding: 2rem;
+}
+
+.countdown-timer .timer .countdown {
+    font-size: 3rem;
+    color: var(--main-accent);
+}
+
+.countdown-timer .timer .sub-headings {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.countdown-timer .timer .opacity {
+    opacity: 0.5;
+    color: gray !important; 
+}
+
+@media screen and (max-width: 767px) {
+    .countdown-timer .timer {
+        max-width: 100%;
+    }
+
+    .countdown-timer .timer .countdown {
+        font-size: 2rem;
+        color: var(--main-accent);
+    }
+    
+    .countdown-timer .timer .sub-headings {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+}
